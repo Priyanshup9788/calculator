@@ -1,0 +1,72 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+void add(int n1,int n2){
+    printf("Addition of %d and %d is %d\n",n1,n2,n1+n2);
+}
+
+void sub(int n1,int n2){
+    printf("Subtraction of %d and %d is %d\n",n1,n2,n1-n2);
+}
+
+void mul(int n1,int n2){
+    printf("Multiplication of %d and %d is %d\n",n1,n2,n1*n2);
+}
+
+void divi(int n1,int n2){
+    printf("Divison of %d and %d is %d\n",n1,n2,n1/n2);
+}
+
+void mod(int n1,int n2){
+    printf("Modulas of %d and %d is %d\n",n1,n2,n1%n2);
+}
+
+int main() {
+   int ch,n1,n2;
+   
+   do
+   {
+       printf("Press 1 for +\n");
+       printf("Press 2 for -\n");
+       printf("Press 3 for *\n");
+       printf("Press 4 for /\n");
+       printf("Press 5 for %\n");
+       printf("Press 0 for exit\n");
+       
+       printf("Enter your choice: ");
+       scanf("%d",&ch);
+       
+       if(ch>=1 && ch<=5){
+       printf("Enter the first number: ");
+       scanf("%d",&n1);
+       
+       printf("Enter the second number: ");
+       scanf("%d",&n2);
+       }
+       
+       switch(ch)
+       {
+            case 0:
+                break;
+            case 1:
+                add(n1,n2);
+                break;
+            case 2:
+                sub(n1,n2);
+                break;
+            case 3:
+                mul(n1,n2);
+                break;
+            case 4:
+                divi(n1,n2);
+                break;
+            case 5:
+                mod(n1,n2);
+                break;
+            default:
+                printf("Invalid input...\n");
+                break;
+       }
+       
+   }while(ch!=0);
+}
